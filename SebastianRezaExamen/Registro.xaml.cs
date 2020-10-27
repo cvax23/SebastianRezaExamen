@@ -19,13 +19,20 @@ namespace SebastianRezaExamen
 
         private async void BtnCalculatePayments_Clicked(object sender, System.EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txtInitalAmount.Text))
+            {
+                await DisplayAlert("Alert", $"Please complete all entries", "Ok");
+                return;
+            }
+
             double initalAmount = Convert.ToDouble(txtInitalAmount.Text);
+
             if (initalAmount < 0 ||
                 initalAmount > SemesterCost) 
             {
                 await DisplayAlert("Alert", $"Initial amount must be greather than 0 and less than ${SemesterCost}", "Ok");
                 return;
-            }
+            }           
 
             double residue = (SemesterCost - initalAmount) / 3;
             double interest = residue * 0.05;
