@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+             Title="Register"
+             NavigationPage.HasBackButton="False"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SebastianRezaExamen.Registro">
+    <StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+            <Label x:Name="lblUserConected" 
+                   FontSize="18"
+                   TextColor="#F28095"
+                   Text="User: " />
+        </StackLayout>
+
+        <StackLayout>
+            <Grid >
+                <Entry Grid.Row="0" Grid.Column="0"
+                        x:Name="txtName"
+                        Placeholder="Student's name"
+                        HorizontalTextAlignment="Center"
+                        FontSize="20" 
+                        TextColor="#127ac7"/>
+                <Entry Grid.Row="1" Grid.Column="0"
+                        x:Name="txtInitalAmount"
+                        Placeholder="Initial Amount"
+                        HorizontalTextAlignment="Center"
+                        FontSize="20" 
+                        TextColor="#127ac7"
+                        Keyboard="Numeric"/>
+                <Label  Grid.Row="3" Grid.Column="0"
+                        Text="Monthly Payment"
+			            VerticalOptions="Center"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        TextColor="#127ac7"
+			            FontSize="25" 
+			            FontAttributes="Bold"  
+			            HorizontalOptions="Center" 
+                        IsEnabled="false"/>
+                <Label  Grid.Row="4" Grid.Column="0"
+                        x:Name="lblMonthlyPayment"
+			            VerticalOptions="Center"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        TextColor="#127ac7"
+			            FontSize="25" 
+			            FontAttributes="Bold"  
+			            HorizontalOptions="Center" 
+                        IsEnabled="false"/>
+                <Button Grid.Row="4" Grid.Column="1"
+			            x:Name="btnCalculatePayments"
+                        Text="Calculate" 
+			            TextColor="White"
+                        FontSize="20"
+                        BackgroundColor="#1dabf0"
+                        Clicked="BtnCalculatePayments_Clicked"/>
+            </Grid>
+            <StackLayout Padding="30">
+                <Button 
+			            x:Name="btnSave"
+                        Text="Save" 
+			            TextColor="White"
+                        FontSize="20"
+			            BackgroundColor="#1dabf0"
+                        Clicked="BtnSave_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    Title="Login"
+    BackgroundColor="#127ac7"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SebastianRezaExamen.Login">
+    <StackLayout VerticalOptions="Center" >
+
+        <StackLayout VerticalOptions ="Center" Padding="0,30">
+            <Image Source="https://sbsconsulting.com.ec/wp-content/uploads/2018/01/LOGO-UISRAEL-768x209.png"/>
+        </StackLayout>
+
+        <Entry
+            x:Name="txtUser"
+            Placeholder="User"
+            HorizontalTextAlignment="Center"
+            FontSize="20" 
+            TextColor="White"/>
+        <Entry
+            x:Name="txtPassword"
+            Placeholder="Password"
+            HorizontalTextAlignment="Center"
+            FontSize="20"
+            TextColor="White"
+            IsPassword="True"/>
+
+        <StackLayout Padding="30">
+            <Button 
+			x:Name="btnLogin"
+            Text="Login" 
+			TextColor="White"
+            FontSize="20"
+			BackgroundColor="#1dabf0"
+            Clicked="BtnLogin_Clicked"
+            />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

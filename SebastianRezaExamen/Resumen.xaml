@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    Title="Resumen"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SebastianRezaExamen.Resumen">
+    <StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+            <Label x:Name="lblUserConected" 
+                   FontSize="18"
+                   TextColor="#F28095"
+                   Text="User: " />
+        </StackLayout>
+        <StackLayout>
+            <Grid >
+                <Label  Grid.Row="0" Grid.Column="0"
+                x:Name="lblName"
+			    Text="Student: "
+                VerticalOptions="Center"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
+                TextColor="#127ac7"
+			    FontSize="25"
+			    FontAttributes="Bold"
+			    HorizontalOptions="Center"
+                IsEnabled="false"/>
+                <Label  Grid.Row="1" Grid.Column="0"
+                x:Name="lblTotalPayment"
+                Text="Total Payment: "
+			    VerticalOptions="Center"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
+                TextColor="#F28095"
+			    FontSize="25"
+			    FontAttributes="Bold"
+			    HorizontalOptions="Center"
+                IsEnabled="false"/>
+            </Grid>
+        </StackLayout>              
+    </StackLayout>
+</ContentPage>
