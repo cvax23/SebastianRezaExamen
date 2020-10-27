@@ -23,14 +23,14 @@ namespace SebastianRezaExamen
             if (initalAmount < 0 ||
                 initalAmount > SemesterCost) 
             {
-                await DisplayAlert("Alert", $"Initial Amount must be greather than 0 and less than {SemesterCost}", "Ok");
+                await DisplayAlert("Alert", $"Initial amount must be greather than 0 and less than ${SemesterCost}", "Ok");
                 return;
             }
 
             double residue = (SemesterCost - initalAmount) / 3;
             double interest = residue * 0.05;
             double monthlyPayment = (residue + interest);
-            lblMonthlyPayment.Text = $"{monthlyPayment}";
+            lblMonthlyPayment.Text = $"${monthlyPayment}";
             _student.TotalPayment = monthlyPayment * 3;
         }
 
@@ -45,12 +45,12 @@ namespace SebastianRezaExamen
 
             if (string.IsNullOrWhiteSpace(lblMonthlyPayment.Text))
             {
-                await DisplayAlert("Alert", $"Please Calculate Monthly Payment", "Ok");
+                await DisplayAlert("Alert", $"Please calculate monthly payment", "Ok");
                 return;
             }
             _student.Name = txtName.Text;
             
-            await DisplayAlert("Info", $"Saved Succesfully", "Ok");
+            await DisplayAlert("Info", $"Saved succesfully", "Ok");
             await Navigation.PushAsync(new Resumen(_student));
         }
     }
